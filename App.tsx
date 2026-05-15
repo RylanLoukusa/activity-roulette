@@ -26,6 +26,7 @@ const initialFilters: ActivityFilters = {
   energyLevel: null,
   timeOfDay: null,
   weather: null,
+  chaosLevel: null,
 };
 
 export default function App() {

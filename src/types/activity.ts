@@ -4,6 +4,7 @@ export type LocationType = 'Indoor' | 'Outdoor' | 'Either';
 export type EnergyLevel = 'Chill' | 'Moderate' | 'Active' | 'Adventurous';
 export type TimeOfDay = 'Morning' | 'Afternoon' | 'Evening' | 'Night';
 export type Weather = 'Any' | 'Sunny' | 'Rainy' | 'Cold' | 'Hot';
+export type ChaosLevel = 'Safe' | 'Spontaneous' | 'Adventurous' | 'Chaotic';
 
 export interface ActivityFilters {
   occasion: Occasion | null;
@@ -12,6 +13,7 @@ export interface ActivityFilters {
   energyLevel: EnergyLevel | null;
   timeOfDay: TimeOfDay | null;
   weather: Weather | null;
+  chaosLevel: ChaosLevel | null;
 }
 
 export interface Activity {
@@ -29,6 +31,7 @@ export interface Activity {
   energyLevel: EnergyLevel[];
   timeOfDay: TimeOfDay[];
   weather: Weather[];
+  chaosLevel: ChaosLevel;
 }
 
 export const OCCASIONS: Occasion[] = ['Solo', 'Date', 'Friends', 'Family'];
@@ -37,3 +40,4 @@ export const LOCATION_TYPES: LocationType[] = ['Indoor', 'Outdoor', 'Either'];
 export const ENERGY_LEVELS: EnergyLevel[] = ['Chill', 'Moderate', 'Active', 'Adventurous'];
 export const TIMES_OF_DAY: TimeOfDay[] = ['Morning', 'Afternoon', 'Evening', 'Night'];
 export const WEATHER_OPTIONS: Weather[] = ['Any', 'Sunny', 'Rainy', 'Cold', 'Hot'];
+export const CHAOS_LEVELS: ChaosLevel[] = ['Safe', 'Spontaneous', 'Adventurous', 'Chaotic'];

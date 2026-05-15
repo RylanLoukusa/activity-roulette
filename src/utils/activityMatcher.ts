@@ -27,6 +27,7 @@ const scoreActivity = (activity: Activity, filters: ActivityFilters) => {
   if (filters.energyLevel && activity.energyLevel.includes(filters.energyLevel)) score += 2;
   if (filters.timeOfDay && activity.timeOfDay.includes(filters.timeOfDay)) score += 2;
   if (matchesWeather(activity, filters.weather)) score += filters.weather && filters.weather !== 'Any' ? 1 : 0;
+  if (filters.chaosLevel && activity.chaosLevel === filters.chaosLevel) score += 1;
 
   return score;
 };
@@ -50,8 +51,9 @@ export const getMatchingActivity = (
     const energyMatch = !filters.energyLevel || activity.energyLevel.includes(filters.energyLevel);
     const timeMatch = !filters.timeOfDay || activity.timeOfDay.includes(filters.timeOfDay);
     const weatherMatch = matchesWeather(activity, filters.weather);
+    const chaosMatch = !filters.chaosLevel || activity.chaosLevel === filters.chaosLevel;
 
-    return occasionMatch && budgetMatch && locationMatch && energyMatch && timeMatch && weatherMatch;
+    return occasionMatch && budgetMatch && locationMatch && energyMatch && timeMatch && weatherMatch && chaosMatch;
   });
 
   if (exactMatches.length > 0) {

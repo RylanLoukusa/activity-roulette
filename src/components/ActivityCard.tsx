@@ -29,6 +29,7 @@ export const ActivityCard = ({ activity, isFavorite = false, onSave, onRemove, o
         <Meta label="Cost" value={activity.estimatedCost} />
         <Meta label="Vibe" value={activity.vibe} />
         <Meta label="Duration" value={activity.duration} />
+        <Meta label="Chaos" value={activity.chaosLevel} />
       </View>
 
       <View style={styles.backupBox}>

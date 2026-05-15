@@ -2,6 +2,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { FilterChips } from '../components/FilterChips';
 import {
   ActivityFilters,
+  CHAOS_LEVELS,
+  ChaosLevel,
   BUDGETS,
   Budget,
   ENERGY_LEVELS,
@@ -66,6 +68,12 @@ export const FiltersScreen = ({ filters, onChange, onClear, onGenerate }: Filter
         options={WEATHER_OPTIONS}
         selectedValue={filters.weather}
         onSelect={(value) => onChange('weather', value)}
+      />
+      <FilterChips<ChaosLevel>
+        label="Chaos level"
+        options={CHAOS_LEVELS}
+        selectedValue={filters.chaosLevel}
+        onSelect={(value) => onChange('chaosLevel', value)}
       />
 
       <View style={styles.actions}>
