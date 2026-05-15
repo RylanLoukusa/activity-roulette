@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Activity Roulette",
+    "slug": "activity-roulette",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#fff8f0"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {}
+  }
+}
